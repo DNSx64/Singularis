@@ -1,0 +1,166 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Singularis: Check host prerequisites",
+			"type": "shell",
+			"command": "flatpak-spawn",
+			"args": [
+				"--host",
+				"sh",
+				"-lc",
+				"rustc --version; cargo --version; node --version; npm --version; pkg-config --modversion webkit2gtk-4.1"
+			],
+			"problemMatcher": []
+		},
+		{
+			"label": "Singularis: Install web dependencies",
+			"type": "shell",
+			"command": "flatpak-spawn",
+			"args": [
+				"--host",
+				"npm",
+				"install"
+			],
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Singularis: Test Rust workspace",
+			"type": "shell",
+			"command": "flatpak-spawn",
+			"args": [
+				"--host",
+				"cargo",
+				"test",
+				"--workspace",
+				"--all-targets"
+			],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Singularis: Test first encrypted outbox flow",
+			"type": "shell",
+			"command": "flatpak-spawn",
+			"args": [
+				"--host",
+				"cargo",
+				"test",
+				"-p",
+				"singularis-server",
+				"queued_mls_event_survives_restart_and_relay_retry",
+				"--",
+				"--nocapture"
+			],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Singularis: Check Rust formatting",
+			"type": "shell",
+			"command": "flatpak-spawn",
+			"args": [
+				"--host",
+				"cargo",
+				"fmt",
+				"--all",
+				"--",
+				"--check"
+			],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Singularis: Lint Rust workspace",
+			"type": "shell",
+			"command": "flatpak-spawn",
+			"args": [
+				"--host",
+				"cargo",
+				"clippy",
+				"--workspace",
+				"--all-targets",
+				"--",
+				"-D",
+				"warnings"
+			],
+			"problemMatcher": [],
+			"group": "test"
+		},
+		{
+			"label": "Singularis: Run server",
+			"type": "shell",
+			"command": "flatpak-spawn",
+			"args": [
+				"--host",
+				"cargo",
+				"run",
+				"-p",
+				"singularis-server"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Singularis: Build web UI",
+			"type": "shell",
+			"command": "flatpak-spawn",
+			"args": [
+				"--host",
+				"npm",
+				"run",
+				"build"
+			],
+			"problemMatcher": [
+				"$tsc"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Singularis: Typecheck web UI",
+			"type": "shell",
+			"command": "flatpak-spawn",
+			"args": [
+				"--host",
+				"npm",
+				"run",
+				"typecheck"
+			],
+			"problemMatcher": [
+				"$tsc"
+			],
+			"group": "test"
+		},
+		{
+			"label": "Singularis: Run web UI",
+			"type": "shell",
+			"command": "flatpak-spawn",
+			"args": [
+				"--host",
+				"npm",
+				"run",
+				"dev"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Singularis: Run Tauri desktop",
+			"type": "shell",
+			"command": "flatpak-spawn",
+			"args": [
+				"--host",
+				"npm",
+				"run",
+				"tauri",
+				"--workspace",
+				"@singularis/desktop",
+				"--",
+				"dev"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		}
+	]
+}

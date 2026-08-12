@@ -1,0 +1,17 @@
+{
+  "name": "singularis",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/desktop"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace @singularis/desktop",
+    "build": "npm run build --workspace @singularis/desktop",
+    "typecheck": "npm run typecheck --workspace @singularis/desktop",
+    "tauri": "npm run tauri --workspace @singularis/desktop"
+  },
+  "engines": {
+    "node": ">=20.19"
+  }
+}

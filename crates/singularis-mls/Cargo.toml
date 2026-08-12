@@ -1,0 +1,24 @@
+[package]
+name = "singularis-mls"
+description = "MLS group state and encrypted event handling for Singularis clients"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish = false
+
+[dependencies]
+openmls.workspace = true
+openmls_basic_credential.workspace = true
+openmls_rust_crypto.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+sha2.workspace = true
+singularis-protocol.workspace = true
+singularis-vault.workspace = true
+thiserror.workspace = true
+uuid.workspace = true
+zeroize.workspace = true
+
+[dev-dependencies]
+tempfile.workspace = true
+time.workspace = true
