@@ -1,20 +1,20 @@
 # Singularis Wiki
 
-Willkommen zur Dokumentation fuer Singularis.
+Welcome to the Singularis documentation.
 
-## Inhalte
+## Contents
 
-- [Projektziel](Project-Goal.md)
-- [Server aufsetzen](Server-Setup.md)
-- [Server oeffentlich machen](Public-Expose.md)
-- [Nützliche Server-Kommandos](Server-Commands.md)
+- [Project Goal](Project-Goal.md)
+- [Server Setup](Server-Setup.md)
+- [Expose Server Publicly](Public-Expose.md)
+- [Useful Server Commands](Server-Commands.md)
 
-## Worum es geht
+## What this is about
 
-Singularis ist eine sicherheitsorientierte, local-first Kommunikationsplattform mit Ende-zu-Ende-Verschluesselung und kurzer Server-Aufbewahrung.
+Singularis is a security-focused, local-first communication platform with end-to-end encryption and short-lived server retention.
 
-Das Ziel ist:
+The core goal is:
 
-> Verschluesselt senden, kurzzeitig vermitteln, lokal unter eigener Kontrolle archivieren.
+> Send encrypted, relay briefly, archive locally under your control.
 
-Diese Dokumentation sammelt die praktische Startinformation fuer Selbsthosting und Betrieb.
+This documentation collects practical starting points for self-hosting and operations.

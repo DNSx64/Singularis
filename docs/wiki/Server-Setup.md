@@ -1,24 +1,24 @@
-# Server aufsetzen
+# Server Setup
 
-Diese Seite beschreibt einen typischen Start fuer eine selbst gehostete Singularis-Instanz.
+This page describes a typical starting point for a self-hosted Singularis instance.
 
-## Voraussetzungen
+## Requirements
 
-- Linux-Server mit aktuellem Systemstand
-- Domainname, wenn der Server oeffentlich erreichbar sein soll
-- Docker oder Podman
+- A Linux server with current system updates
+- A domain name if the server should be public
+- Docker or Podman
 - Git
-- TLS-Zertifikate bzw. Reverse Proxy fuer oeffentlichen Betrieb
+- TLS certificates and a reverse proxy for public access
 
-## Grober Ablauf
+## High-level flow
 
-1. Repository klonen.
-2. Konfiguration aus `env.example` anpassen.
-3. Datenvolumes fuer Datenbank, MinIO und andere Dienste vorbereiten.
-4. Services lokal starten.
-5. Logausgabe und Healthchecks pruefen.
+1. Clone the repository.
+2. Copy and adjust configuration from env.example.
+3. Prepare data volumes for database, MinIO, and related services.
+4. Start the services.
+5. Verify logs and health checks.
 
-## Typische Startkommandos
+## Typical bootstrap commands
 
 ```bash
 git clone https://github.com/DNSx64/Singularis.git
@@ -26,11 +26,11 @@ cd Singularis
 cp env.example .env
 ```
 
-Danach die Umgebungsvariablen anpassen und die gewaehlte Laufzeit starten, zum Beispiel mit Docker Compose oder den projektspezifischen Startanweisungen aus dem Repository.
+After that, adjust environment variables and start your selected runtime, for example with Docker Compose or the project-specific run instructions in the repository.
 
-## Was zu pruefen ist
+## What to verify
 
-- Bindet der Server nur an die gewuenschte Adresse?
-- Sind die Datenbank- und Objektspeicher-Volumes vorhanden?
-- Laeuft der Relay-Dienst sauber hoch?
-- Stimmen die Logs ohne Klartextdaten?
+- Is the server bound only to the intended address?
+- Are database and object-storage volumes present and writable?
+- Does the relay service start cleanly?
+- Are logs free of plaintext message content?

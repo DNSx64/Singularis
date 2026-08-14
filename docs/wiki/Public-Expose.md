@@ -1,27 +1,27 @@
-# Server oeffentlich machen
+# Expose Server Publicly
 
-Wenn eine Singularis-Instanz oeffentlich erreichbar sein soll, sollten Netzwerk, TLS und Proxy sauber eingerichtet sein.
+If a Singularis instance should be reachable from the internet, network, TLS, and proxy setup must be explicit and hardened.
 
-## Mindestanforderungen
+## Minimum requirements
 
-- Oeffentliche Domain
-- TLS-Zertifikat
-- Reverse Proxy vor den internen Diensten
-- Firewall nur fuer die benoetigten Ports
-- Harter Blick auf Rate Limits und Logging
+- Public domain
+- TLS certificate
+- Reverse proxy in front of internal services
+- Firewall rules for required ports only
+- Strict controls for rate limits and logging
 
-## Empfohlene Schritte
+## Recommended steps
 
-1. DNS-Eintrag auf den Server zeigen lassen.
-2. Reverse Proxy fuer HTTPS konfigurieren.
-3. Nur die oeffentlichen Endpunkte freigeben.
-4. Interne Services auf `127.0.0.1` oder private Netze binden.
-5. Zugriff und Fehlermeldungen pruefen.
+1. Point DNS records to your server.
+2. Configure reverse proxy for HTTPS.
+3. Expose only required public endpoints.
+4. Bind internal services to 127.0.0.1 or private networks.
+5. Verify external access and error handling.
 
-## Sicherheitscheckliste
+## Security checklist
 
-- Keine offenen Adminports im Internet.
-- Kein Klartext in Proxy-Logs.
-- Backup- und Restore-Pfad dokumentiert.
-- Regelmaessige Updates fuer Host und Container.
-- Monitoring fuer TTL, Fehler und Speicherverbrauch.
+- No admin ports exposed publicly.
+- No plaintext content in proxy logs.
+- Backup and restore path is documented and tested.
+- Host and container updates are applied regularly.
+- Monitoring exists for TTL behavior, errors, and storage pressure.

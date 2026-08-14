@@ -1,18 +1,18 @@
-# Projektziel
+# Project Goal
 
-Singularis soll vertrauliche Community-Kommunikation ermoeglichen, ohne dem Server ein dauerhaftes Klartextarchiv anzuvertrauen.
+Singularis is designed to enable confidential community communication without requiring users to trust the server with a permanent plaintext message archive.
 
-## Leitprinzipien
+## Guiding principles
 
-- Inhalte werden standardmaessig Ende-zu-Ende verschluesselt.
-- Der Server speichert Inhalte nur zeitlich begrenzt.
-- Der lokale Vault gehoert dem Nutzer.
-- Der Browser ist ein fluechtiger Client.
-- Der Kern bleibt selbst hostbar.
+- Content is end-to-end encrypted by default.
+- The server retains encrypted content only for a limited time.
+- The local vault belongs to the user.
+- The browser mode is intentionally ephemeral.
+- The core stack remains self-hostable.
 
-## Nicht-Ziele
+## Non-goals
 
-- Kein anonymes Netzwerk.
-- Kein garantiert forensikfreier Messenger.
-- Kein serverseitiges Nachrichtenarchiv.
-- Keine eigenentwickelten kryptographischen Primitive.
+- It is not an anonymous network.
+- It is not a guaranteed forensic-proof messenger.
+- It is not a server-side long-term message archive.
+- It does not rely on home-grown cryptographic primitives.

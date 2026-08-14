@@ -1,6 +1,6 @@
-# Nützliche Server-Kommandos
+# Useful Server Commands
 
-Die folgenden Kommandos sind typische Helfer fuer Betrieb und Fehlersuche.
+The commands below are common helpers for operations and troubleshooting.
 
 ## System
 
@@ -11,14 +11,14 @@ df -h
 free -h
 ```
 
-## Dienste und Logs
+## Services and logs
 
 ```bash
 systemctl status singularis
 journalctl -u singularis -f
 ```
 
-## Containerbetrieb
+## Container operations
 
 ```bash
 docker ps
@@ -27,14 +27,14 @@ docker compose logs -f
 docker compose restart
 ```
 
-## Netzwerk
+## Network checks
 
 ```bash
 ss -tulpn
 curl -I https://example.com
 ```
 
-## Wartung
+## Maintenance
 
 ```bash
 git pull
