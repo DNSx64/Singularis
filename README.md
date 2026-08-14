@@ -39,6 +39,8 @@ Singularis relies on established building blocks instead of custom cryptography:
 The complete product concept, threat model, and planned architecture are documented
 in [Singularis.md](Singularis.md), which is currently available in German.
 
+Practical self-hosting and operations notes live in [docs/wiki/Home.md](docs/wiki/Home.md).
+
 ## Project status
 
 > [!WARNING]
